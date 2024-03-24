@@ -68,3 +68,50 @@ for (var index = 0; index < 5; index++) {
     console.log(i); // 5, 5, 5, 5, 5
   }, i * 1000);
 }
+
+// Q - functions hosting
+console.log(x); // undefined
+function functionName() {
+  console.log('Hello');
+}
+
+const x = 10;
+const fun = function () {
+  console.log(x); // in this the result is undefined because the scope is local from function
+  var x = 20;
+};
+
+// Q - Params vs Arguments
+
+function sum(a, b) {
+  //a, b areparams
+
+  console.log(a, b);
+}
+sum(1, 2); // 1, 2 are arguments
+
+// Q callback function
+// callback function is a function that is passed as an argument to another function
+
+document.addEventListener('click', function () {
+  console.log('clicked');
+});
+
+// Q - Arrow function
+const add = (a, b) => {
+  return a + b;
+};
+
+// access to argument keyword
+
+function argumentFn() {
+  console.log(arguments); // the print in console is arguments 1, 2, 3
+}
+
+argumentFn(1, 2, 3);
+
+const argumentArrowFn = () => {
+  console.log(arguments); // the print in console is a underfined 
+};
+
+
